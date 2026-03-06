@@ -1,0 +1,13 @@
+class Solution(object):
+    def differenceOfSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        element=0
+        digit=0
+        for i in nums: 
+            element+=i 
+            for k in str(i): 
+                digit+=int(k)
+        return abs(element-digit) 
