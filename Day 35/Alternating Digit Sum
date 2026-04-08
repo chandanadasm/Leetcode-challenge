@@ -1,0 +1,14 @@
+class Solution(object):
+    def alternateDigitSum(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        sum=0
+        m=str(n)
+        for i in range(len(m)):
+            if i%2==0:
+                sum+=int(m[i])
+            else:
+                sum-=int(m[i])
+        return sum
